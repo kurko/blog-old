@@ -11,7 +11,10 @@ end
 
 module Blog
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
+    config.generators do |g|
+      g.view_specs false
+      g.helpers_specs false
+    end    # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
