@@ -1,0 +1,61 @@
+body {
+  font-size: 76%;
+  font-family: "Lucida Sans";
+}
+
+h1, h2, h3, h4, h5 { 
+  font-family: "Myriad Pro";
+}
+
+span.detail {
+  font-size: 0.9em;
+  color: #777;
+}
+#global {
+  width: 960px;
+  display: table;
+  margin: 10px auto;
+}
+
+header {
+  min-height: 200px;
+
+  #about_header {
+    font-family: "Myriad Pro";
+    text-align: center;
+    width: 800px;
+    margin: 15px auto;
+    display: table;
+    font-size: 3em;
+    font-weight: bold;
+  }
+}
+
+#main {
+  display: table;
+  width: 960px;
+
+  #photos_line {
+    margin-bottom: 15px;
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+
+  .content {
+    display: table;
+    float: left;
+    width: 225px;
+    margin: 0 0 0 20px;
+
+    h1 {
+      font-size: 1.2em;
+      font-weight: 200;
+      margin-bottom: 15px;
+    }
+  }
+
+  .content:first-child {
+    margin: 0;
+  }
+}

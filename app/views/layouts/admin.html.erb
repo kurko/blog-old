@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aust CMS</title>
+  <%= stylesheet_link_tag    "admin_manifest", :media => "all" %>
+  <%= javascript_include_tag "admin_manifest" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div>
+    <%= link_to "Sair", destroy_admin_user_session_path %>
+<%= yield %>
+
+</body>
+</html>
