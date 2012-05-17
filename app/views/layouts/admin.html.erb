@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Aust CMS</title>
+  <title>Admin Panel</title>
   <%= stylesheet_link_tag    "admin_manifest", :media => "all" %>
   <%= javascript_include_tag "admin_manifest" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <div>
-    <%= link_to "Sair", destroy_admin_user_session_path %>
-<%= yield %>
+  <div id="global">
+    <header>
+      <div class="centralizer">
+        <div class="header_container">
+          <div id="title">
+            <h1>Admin</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div class="centralizer">
+        <ul>
+          <li><%= link_to "Posts", "#" %></li>
+          <li><%= link_to "Sair", destroy_admin_user_session_path %></li>
+        </ul>
+      </div>
+    </nav>
+  
+    <div id="main">
+      <div class="main_container">
+        <%= yield %>
+      </div>
+    </div>
+    <footer>
+    </footer>
+  </div>
 
 </body>
 </html>
