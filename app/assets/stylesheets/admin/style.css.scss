@@ -30,7 +30,7 @@ span.detail {
 header {
   display: table;
   position: relative;
-  height: 85px;
+  height: 75px;
   width: 100%;
   color: white;
 
@@ -47,7 +47,6 @@ nav {
   width: 100%;
   display: table;
   margin: 0 auto;
-  bottom: 5px;
   position: relative;
 
   ul {
@@ -59,11 +58,19 @@ nav {
       margin: 0 0 0 5px;
 
       a {
-        background: #fdfdfd;
+        background: #eee;
         padding: 6px 12px;
         display: table;
         text-decoration: none;
       }
+
+      a:hover {
+        background: white;
+      }
+    }
+
+    li.current a {
+      background: #fdfdfd;
     }
   }
 }
@@ -72,9 +79,17 @@ nav {
   display: table;
   width: 960px;
   background: white;
+  margin: 0 auto;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
 
   .main_container {
     margin: 10px;
+  }
+
+  h1 {
+    font-weight: 200;
+    margin-bottom: 15px;
   }
 
   .content {
@@ -83,11 +98,6 @@ nav {
     width: 225px;
     margin: 0 0 0 20px;
 
-    h1 {
-      font-size: 1.2em;
-      font-weight: 200;
-      margin-bottom: 15px;
-    }
   }
 
   .content:first-child {

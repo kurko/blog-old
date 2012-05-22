@@ -1,0 +1,25 @@
+<h1>Texts</h1>
+
+<table class="listing">
+  <thead>
+    <tr>
+      <th class="date">Date</th>
+      <th>Title</th>
+      <th class="options"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @texts.each do |text| %>
+      <tr>
+        <td><%= text.created_at %></td>
+        <td><%= link_to text.title, edit_admin_text_path(text) %></td>
+        <td><%= link_to 'Destroy', [:admin, text], confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    <% end %>
+  </body>
+</table>
+
+<br />
+
+<%= link_to 'New Text', new_admin_text_path %>

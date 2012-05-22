@@ -1,0 +1,19 @@
+table.listing {
+  width: 100%;
+  border-spacing: 0;
+
+  th, td {
+    padding: 8px 10px;
+    text-align: left;
+  }
+
+  th.options { width: 100px; }
+  th.date { width: 140px; }
+
+  thead {
+    color: #fdfdfd;
+    tr th {
+      background: image-url('admin/layout/header.jpg') #efefef;
+    }
+  }
+}

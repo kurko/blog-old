@@ -1,4 +1,5 @@
 Blog::Application.routes.draw do
+
   get "dashboard/index"
 
   devise_for :admin_users, path: "admin",
@@ -7,8 +8,9 @@ Blog::Application.routes.draw do
     }
 
   namespace :admin do
+    resources :texts
 
-    root :to => 'dashboard#index'
+    root :to => 'texts#index'
   end
 
   get "home/index"
