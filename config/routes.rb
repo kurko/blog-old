@@ -9,6 +9,7 @@ Blog::Application.routes.draw do
 
   namespace :admin do
     resources :texts
+    resources :taxonomies
 
     root :to => 'texts#index'
   end

@@ -57,6 +57,11 @@ nav {
       float: left;
       margin: 0 0 0 5px;
 
+      &.right {
+        float: right;
+        margin-right: 5px;
+      }
+
       a {
         background: #eee;
         padding: 6px 12px;
