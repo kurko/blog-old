@@ -1,4 +1,4 @@
-class TextsController < ApplicationController
+class TextsController < ApplicationContentsController
   def index
   end
 

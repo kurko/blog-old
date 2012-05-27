@@ -1,24 +1,38 @@
 body {
   font-size: 76%;
   font-family: "Lucida Sans";
+  background: image-url("application/background.png");
 }
 
 h1, h2, h3, h4, h5 { 
   font-family: "Myriad Pro";
 }
 
+a { color: #512c00; text-decoration: none; }
+a:hover { text-decoration: underline; }
+p { margin-bottom: 15px; line-height: 22px; }
+
 span.detail {
   font-size: 0.9em;
   color: #777;
 }
+
 #global {
   width: 960px;
   display: table;
-  margin: 10px auto;
+  margin: 0px auto;
 }
 
 header {
-  min-height: 200px;
+  border-bottom: 1px solid #ebede7;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+
+  .header_container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
 
   #about_header {
     font-family: "Myriad Pro";
@@ -31,6 +45,19 @@ header {
   }
 }
 
+body.content_layout {
+  header #about_header {
+    margin: 0;
+    text-align: left;
+    font-size: 1.4em;
+  }
+
+  .main_content_columns h1 {
+    font-size: 3.0em;
+    margin-bottom: 10px;
+  }
+}
+
 #main {
   display: table;
   width: 960px;
@@ -40,6 +67,10 @@ header {
     display: table;
     text-align: center;
     width: 100%;
+    font-size: 0;
+    
+    img { margin-left: 3px; }
+    img:first-child { margin-left: 0; }
   }
 
   .content {
@@ -50,7 +81,7 @@ header {
 
     h1 {
       font-size: 1.2em;
-      font-weight: 200;
+      font-weight: bold;
       margin-bottom: 15px;
     }
   }

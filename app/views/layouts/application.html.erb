@@ -8,8 +8,10 @@
 </head>
 <body>
 
-  <div id="global">
-  	<header>
+  <div class="body_background">
+
+  <header>
+    <div class="header_container">
       <nav>
         Personal website
       </nav>
@@ -17,7 +19,10 @@
         I am Alexandre de Oliveira, 25, software developer 
         at Stack Builders, a NY based company.
       </div>
-  	</header>
+    </end>
+  </header>
+
+  <div id="global">
     <div id="main">
       <div class="main_container">
         <div id="photos_line">
@@ -38,6 +43,7 @@
           <%= image_tag("tmp/07.jpeg", width: 50, height: 50) %>
           <%= image_tag("tmp/08.jpeg", width: 50, height: 50) %>
           <%= image_tag("tmp/01.jpeg", width: 50, height: 50) %>
+          <%= image_tag("tmp/02.jpeg", width: 50, height: 50) %>
         </div>
         <div class="contents_columns">
           <%= yield %>
@@ -46,6 +52,8 @@
     </div>
     <footer>
     </footer>
+  </div>
+
   </div>
 
 </body>
