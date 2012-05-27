@@ -5,6 +5,7 @@
     <tr>
       <th class="date">Date</th>
       <th>Title</th>
+      <th>Category</th>
       <th class="options"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
       <tr>
         <td><%= text.created_at %></td>
         <td><%= link_to text.title, edit_admin_text_path(text) %></td>
+        <td><%= text.taxonomy %></td>
         <td><%= link_to 'Destroy', [:admin, text], confirm: 'Are you sure?', method: :delete %></td>
       </tr>
     <% end %>

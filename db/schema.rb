@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120523013811) do
+ActiveRecord::Schema.define(:version => 20120523015911) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -44,6 +44,9 @@ ActiveRecord::Schema.define(:version => 20120523013811) do
     t.integer  "author_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "taxonomy_id"
   end
+
+  add_index "texts", ["taxonomy_id"], :name => "index_texts_on_taxonomy_id"
 
 end

@@ -1,6 +1,9 @@
 <%= simple_form_for([:admin, @text]) do |f| %>
-    <%= f.input :title, as: :string %><br />
-    <%= f.input :description, input_html: { rows: 4 } %><br />
-    <%= f.input :content %><br />
-    <%= f.submit %>
+
+  <%= f.input :taxonomy_id, value_method: :id, collection: @taxonomies %><br />
+
+  <%= f.input :title, as: :string %><br />
+  <%= f.input :description, input_html: { rows: 4 } %><br />
+  <%= f.input :content %><br />
+  <%= f.submit %>
 <% end %>

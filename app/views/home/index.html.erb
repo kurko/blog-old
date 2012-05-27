@@ -1,2 +1,83 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="content">
+  <h1>Software</h1>
+  <%= render "listing", collection: @softwares %>
+</div>
+
+<div class="content">
+  <h1>Essays</h1>
+  <%= render "listing", collection: @essays %>
+</div>
+
+<div class="content">
+  <h1>Personal</h1>
+  <%= render "listing", collection: @personals %>
+</div>
+
+<div class="content">
+  <div id="highlights">
+    <h1>Highlights</h1>
+    <ul>
+      <li>
+        RubyConf Brazil 2011
+        <span class="detail">(São Paulo)</span>
+      </li>
+      <li>
+        Euruko 2012
+        <span class="detail">(Amsterdam)</span>
+      </li>
+      <li>
+        RubyKaigi 2012
+        <span class="detail">(Sapporo)</span>
+      </li>
+    </ul>
+
+    <h1>Recomended books</h1>
+    <ul>
+      <li>
+        Domain-Driven Design
+        <span class="detail">(Eric Evans)</span>
+      </li>
+      <li>
+        Growing Object-Oriented Software, Guided by Tests
+        <span class="detail">(Steve Freeman, Nat Pryce)</span>
+      </li>
+      <li>
+        A Gift to My Children
+        <span class="detail">(Jim Rogers)</span>
+      </li>
+    </ul>
+
+    <h1>Knowledge</h1>
+    <ul>
+      <li>
+        software engineering
+        <span class="detail">(OOP, TDD, BDD)</span>
+      </li>
+      <li>
+        Ruby, Ruby on Rails and Javascript
+        <span class="detail">(my daily job tools)</span>
+      </li>
+      <li>
+        how to mount a calculator
+        <span class="detail">(believe me, that's hard)</span>
+      </li>
+    </ul>
+
+    <h1>Interests</h1>
+    <ul>
+      <li>
+        Webdesign
+        <span class="detail">(I started as designer)</span>
+      </li>
+      <li>
+        Science
+      </li>
+      <li>
+        Music + Psychology
+      </li>
+      <li>
+        Apple computers
+      </li>
+    </ul>
+  </div>
+</div>

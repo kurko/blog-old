@@ -1,44 +1,23 @@
 class Admin::TextsController < Admin::ApplicationController
-  # GET /texts
-  # GET /texts.json
+  before_filter :load_taxonomies, only: [:new, :edit]
+
   def index
     @texts = ::TextDecorator.decorate(Text.order("id desc").all)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @texts }
-    end
   end
 
-  # GET /texts/1
-  # GET /texts/1.json
   def show
     @text = Text.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @text }
-    end
   end
 
-  # GET /texts/new
-  # GET /texts/new.json
   def new
     @text = Text.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @text }
-    end
   end
 
-  # GET /texts/1/edit
   def edit
     @text = Text.find(params[:id])
+    @selected_taxonomy = @text.taxonomy_id
   end
 
-  # POST /texts
-  # POST /texts.json
   def create
     @text = Text.new(params[:text])
 
@@ -79,5 +58,11 @@ class Admin::TextsController < Admin::ApplicationController
       format.html { redirect_to admin_texts_url }
       format.json { head :no_content }
     end
+  end
+
+private
+  
+  def load_taxonomies
+    @taxonomies = Taxonomy.all
   end
 end
