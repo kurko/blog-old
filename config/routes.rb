@@ -1,5 +1,9 @@
 Blog::Application.routes.draw do
 
+  get "taxonomy/index"
+
+  get "taxonomy/show"
+
   get "dashboard/index"
 
   devise_for :admin_users, path: "admin",
@@ -13,6 +17,8 @@ Blog::Application.routes.draw do
 
     root :to => 'texts#index'
   end
+
+  resources :texts, only: [:index, :show]
 
   get "home/index"
 

@@ -8,4 +8,8 @@ class TextDecorator < ApplicationDecorator
   def taxonomy
     text.taxonomy.name if text.taxonomy.present?
   end
+
+  def content
+    text.content.gsub(/\n/, "<br />")
+  end
 end
