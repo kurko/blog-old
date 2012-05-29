@@ -51,11 +51,6 @@ body.content_layout {
     text-align: left;
     font-size: 1.4em;
   }
-
-  .main_content_columns h1 {
-    font-size: 3.0em;
-    margin-bottom: 10px;
-  }
 }
 
 #main {
@@ -73,20 +68,43 @@ body.content_layout {
     img:first-child { margin-left: 0; }
   }
 
-  .content {
-    display: table;
-    float: left;
-    width: 225px;
-    margin: 0 0 0 20px;
+  .contents_columns {
+    .content {
+      display: table;
+      float: left;
+      width: 225px;
+      margin: 0 0 0 20px;
 
-    h1 {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-bottom: 15px;
+      h1 {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+    }
+
+    .content:first-child {
+      margin: 0;
     }
   }
 
-  .content:first-child {
-    margin: 0;
+  .main_content_columns {
+    width: 680px;
+    float: left;
+
+    h1 {
+      font-size: 3.0em;
+      margin-bottom: 10px;
+    }
+  }
+
+  .secondary_column {
+    width: 260px;
+    float: right;
+    background-color: #f4f4f4;
+    border: 1px solid #ebede7;
+
+    .container {
+      margin: 10px;
+    }
   }
 }
