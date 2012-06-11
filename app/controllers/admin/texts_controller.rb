@@ -20,36 +20,26 @@ class Admin::TextsController < Admin::ApplicationController
 
   def create
     @text = Text.new(params[:text])
+    define_publishing_state
 
-    respond_to do |format|
-      if @text.save
-        format.html { redirect_to admin_texts_path, notice: 'Text was successfully created.' }
-        format.json { render json: @text, status: :created, location: @text }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @text.errors, status: :unprocessable_entity }
-      end
+    if @text.save
+      redirect_to admin_texts_path, notice: 'Text was successfully created.'
+    else
+      render action: "new"
     end
   end
 
-  # PUT /texts/1
-  # PUT /texts/1.json
   def update
     @text = Text.find(params[:id])
+    define_publishing_state
 
-    respond_to do |format|
-      if @text.update_attributes(params[:text])
-        format.html { redirect_to admin_texts_path, notice: 'Text was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @text.errors, status: :unprocessable_entity }
-      end
+    if @text.update_attributes(params[:text])
+      redirect_to admin_texts_path, notice: 'Text was successfully updated.'
+    else
+      render action: "edit"
     end
   end
 
-  # DELETE /texts/1
-  # DELETE /texts/1.json
   def destroy
     @text = Text.find(params[:id])
     @text.destroy
@@ -64,5 +54,13 @@ private
   
   def load_taxonomies
     @taxonomies = Taxonomy.all
+  end
+
+  def define_publishing_state
+    if params[:commit] == "Publish"
+      @text.published = true
+    else
+      @text.published = false
+    end
   end
 end

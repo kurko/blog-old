@@ -13,4 +13,8 @@ class TextDecorator < ApplicationDecorator
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
     markdown.render text.content
   end
+
+  def published_status
+    " (not published)" unless text.published == true
+  end
 end

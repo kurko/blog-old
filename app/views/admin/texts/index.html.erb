@@ -14,7 +14,10 @@
     <% @texts.each do |text| %>
       <tr>
         <td><%= text.created_at %></td>
-        <td><%= link_to text.title, edit_admin_text_path(text) %></td>
+        <td>
+          <%= link_to text.title, edit_admin_text_path(text) %>
+          <%= text.published_status %>
+        </td>
         <td><%= text.taxonomy %></td>
         <td><%= link_to 'Destroy', [:admin, text], confirm: 'Are you sure?', method: :delete %></td>
       </tr>
