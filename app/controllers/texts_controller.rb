@@ -3,6 +3,12 @@ class TextsController < ApplicationContentsController
   end
 
   def show
-    @text = ::TextDecorator.decorate(Text.find(params[:id]))
+    @text = DecorationBuilder.text(Text.find(text_id))
+  end
+
+private
+
+  def text_id
+    params[:id]
   end
 end

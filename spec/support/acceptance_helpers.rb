@@ -10,7 +10,7 @@ module AcceptanceHelpers
   end
 
   def default_taxonomy
-    FactoryGirl.create(:taxonomy, name: "News")
+    FactoryGirl.create(:taxonomy, name: "Personal")
     FactoryGirl.create(:taxonomy, name: "Essays")
     FactoryGirl.create(:taxonomy, name: "Software")
   end

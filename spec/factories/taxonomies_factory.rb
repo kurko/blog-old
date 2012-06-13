@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :taxonomy do
-    name "News"
+    name "Personal"
   end
 end
