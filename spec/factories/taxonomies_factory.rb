@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :taxonomy do
+  factory :taxonomy, class: Taxonomy::Persistence do
     name "Personal"
   end
 end

@@ -1,4 +1,4 @@
-<%= simple_form_for([:admin, @text]) do |f| %>
+<%= simple_form_for(@text, as: :text, url: { action: form_action }) do |f| %>
 
   <%= f.input :taxonomy_id, value_method: :id, collection: @taxonomies %><br />
 

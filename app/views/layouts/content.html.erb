@@ -13,7 +13,7 @@
   <header>
     <div class="header_container">
       <div id="about_header">
-        <%= link_to "Alexandre's website", root_path %>
+        <%= link_to "Back to homepage", root_path %>
       </div>
     </end>
   </header>
@@ -27,7 +27,28 @@
 
         <div class="secondary_column">
           <div class="container">
-            I'm Alexandre de Oliveira
+            <p>
+              I'm Alexandre de Oliveira.
+            </p>
+            <p>
+              I live in Brazil and
+              my main tools at work are Ruby on Rails and
+              Javascript. 
+            </p>
+            <p>
+              I enjoy experimenting what theory suggests,
+              trying to understand the reasons behind principles.
+            </p>
+            <p>
+              <a href="http://twitter.com/kurko">
+                You should 
+                follow me on Twitter.
+              </a>
+            </p>
+          </div>
+
+          <div class="container">
+            <%= render "shared/recommended_books" %>
           </div>
         </div>
       </div>

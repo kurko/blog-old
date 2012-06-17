@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :text do
+  factory :text, class: Text::Persistence do
     title "My text title"
     description "This is a description"
     content "This is the content"

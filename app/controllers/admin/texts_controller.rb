@@ -2,24 +2,24 @@ class Admin::TextsController < Admin::ApplicationController
   before_filter :load_taxonomies, only: [:new, :edit]
 
   def index
-    @texts = ::TextDecorator.decorate(Text.order("id desc").all)
+    @texts = DecorationBuilder.text(Text::Persistence.all_texts)
   end
 
   def show
-    @text = Text.find(params[:id])
+    @text = Text::Persistence.find(params[:id])
   end
 
   def new
-    @text = Text.new
+    @text = Text::Persistence.new
   end
 
   def edit
-    @text = Text.find(params[:id])
+    @text = Text::Persistence.find(params[:id])
     @selected_taxonomy = @text.taxonomy_id
   end
 
   def create
-    @text = Text.new(params[:text])
+    @text = Text::Persistence.new(params[:text])
     define_publishing_state
 
     if @text.save
@@ -30,7 +30,7 @@ class Admin::TextsController < Admin::ApplicationController
   end
 
   def update
-    @text = Text.find(params[:id])
+    @text = Text::Persistence.find(params[:id])
     define_publishing_state
 
     if @text.update_attributes(params[:text])
@@ -41,7 +41,7 @@ class Admin::TextsController < Admin::ApplicationController
   end
 
   def destroy
-    @text = Text.find(params[:id])
+    @text = Text::Persistence.find(params[:id])
     @text.destroy
 
     respond_to do |format|
@@ -53,7 +53,7 @@ class Admin::TextsController < Admin::ApplicationController
 private
   
   def load_taxonomies
-    @taxonomies = Taxonomy.all
+    @taxonomies = Taxonomy::Persistence.all
   end
 
   def define_publishing_state

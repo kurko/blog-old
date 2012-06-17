@@ -12,6 +12,9 @@ RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = false
 
+  config.filter_run wip: true
+  config.run_all_when_everything_filtered = true
+
   config.include AcceptanceHelpers
   config.include Devise::TestHelpers, :type => :controller
   config.extend ControllerMacros

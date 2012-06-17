@@ -20,13 +20,6 @@ class HomeController < ApplicationController
   end
 
   def load_texts taxonomy
-    taxonomy = Taxonomy.includes(:texts)
-                       .where(name: taxonomy)
-                       .first
-    if taxonomy.texts.published_texts.present?
-      taxonomy.texts.published_texts
-    else
-      []
-    end
+    Taxonomy::Persistence.find_by_name_with_texts taxonomy
   end
 end

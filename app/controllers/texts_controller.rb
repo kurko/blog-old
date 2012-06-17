@@ -3,7 +3,7 @@ class TextsController < ApplicationContentsController
   end
 
   def show
-    @text = DecorationBuilder.text(Text.find(text_id))
+    @text = DecorationBuilder.text(Text::Persistence.find(text_id))
   end
 
 private

@@ -1,5 +1,5 @@
 class ApplicationContentsController; end
-class Text; end
+module Text; class Persistence; end; end
 class DecorationBuilder; end
 
 require './app/controllers/texts_controller'
@@ -12,11 +12,11 @@ describe TextsController do
   describe "#show" do
     before do
       @controller.stub(:text_id).and_return(:id)
-      Text.stub(:find).with(:id).and_return(:my_text)
+      Text::Persistence.stub(:find).with(:id).and_return(:my_text)
     end
 
     it "should decorate the text object" do
-      DecorationBuilder.should_receive(:text)
+      DecorationBuilder.stub(:text)
                        .with(:my_text)
                        .and_return(:my_text)
       @controller.show.should == :my_text

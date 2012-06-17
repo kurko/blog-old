@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'acceptance_spec_helper'
 
 feature "texts" do
   before do
@@ -7,14 +7,14 @@ feature "texts" do
 
   describe "published texts" do
     scenario "As an user, I can see published texts" do
-      FactoryGirl.create(:text, :published, taxonomy: Taxonomy.first)
+      FactoryGirl.create(:text, :published, taxonomy: Taxonomy::Persistence.first)
       visit root_path
 
       page.should have_content "My text title"
     end
 
     scenario "As an user, I can't see unpublished texts" do
-      FactoryGirl.create(:text, :unpublished, taxonomy: Taxonomy.first)
+      FactoryGirl.create(:text, :unpublished, taxonomy: Taxonomy::Persistence.first)
       visit root_path
 
       page.should_not have_content "My text title"

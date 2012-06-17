@@ -3,6 +3,7 @@
   h2 { font-size: 2.2em; margin-bottom: 15px; margin-top: 20px; }
   h3 { font-size: 1.8em; margin-bottom: 15px; }
 
+
   ul {
     margin: 0 0 15px 25px;
 
@@ -33,6 +34,8 @@
 
     .gist-file { 
       border-radius: 5px;
+
+      .line { line-height: 18px; }
     }
     .gist-data.gist-syntax {
       border-bottom: 0 !important;

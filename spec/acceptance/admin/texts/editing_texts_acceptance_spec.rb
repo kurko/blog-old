@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'acceptance_spec_helper'
 
 feature "editing texts" do
   before do

@@ -2,7 +2,7 @@ class Admin::TaxonomiesController < Admin::ApplicationController
   # GET /taxonomies
   # GET /taxonomies.json
   def index
-    @taxonomies = Taxonomy.all
+    @taxonomies = Taxonomy::Persistence.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class Admin::TaxonomiesController < Admin::ApplicationController
   # GET /taxonomies/1
   # GET /taxonomies/1.json
   def show
-    @taxonomy = Taxonomy.find(params[:id])
+    @taxonomy = Taxonomy::Persistence.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::TaxonomiesController < Admin::ApplicationController
   # GET /taxonomies/new
   # GET /taxonomies/new.json
   def new
-    @taxonomy = Taxonomy.new
+    @taxonomy = Taxonomy::Persistence.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class Admin::TaxonomiesController < Admin::ApplicationController
 
   # GET /taxonomies/1/edit
   def edit
-    @taxonomy = Taxonomy.find(params[:id])
+    @taxonomy = Taxonomy::Persistence.find(params[:id])
   end
 
   # POST /taxonomies
   # POST /taxonomies.json
   def create
-    @taxonomy = Taxonomy.new(params[:taxonomy])
+    @taxonomy = Taxonomy::Persistence.new(params[:taxonomy])
 
     respond_to do |format|
       if @taxonomy.save
@@ -56,7 +56,7 @@ class Admin::TaxonomiesController < Admin::ApplicationController
   # PUT /taxonomies/1
   # PUT /taxonomies/1.json
   def update
-    @taxonomy = Taxonomy.find(params[:id])
+    @taxonomy = Taxonomy::Persistence.find(params[:id])
 
     respond_to do |format|
       if @taxonomy.update_attributes(params[:taxonomy])
@@ -72,7 +72,7 @@ class Admin::TaxonomiesController < Admin::ApplicationController
   # DELETE /taxonomies/1
   # DELETE /taxonomies/1.json
   def destroy
-    @taxonomy = Taxonomy.find(params[:id])
+    @taxonomy = Taxonomy::Persistence.find(params[:id])
     @taxonomy.destroy
 
     respond_to do |format|

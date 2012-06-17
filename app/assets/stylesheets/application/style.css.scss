@@ -10,7 +10,19 @@ h1, h2, h3, h4, h5 {
 
 a { color: #512c00; text-decoration: none; }
 a:hover { text-decoration: underline; }
-p { margin-bottom: 15px; line-height: 22px; }
+p {
+  margin-bottom: 15px; line-height: 22px;
+
+  a {
+    color: #c30000;
+  }
+}
+
+ul {
+  margin: 0 0 15px 15px;
+
+  li { margin: 3px; }
+}
 
 span.detail {
   font-size: 0.9em;
@@ -81,6 +93,12 @@ body.content_layout {
         font-weight: bold;
         margin-bottom: 15px;
       }
+
+      #highlights {
+        h1 {
+          margin-bottom: 12px;
+        }
+      }
     }
 
     .content:first-child {
@@ -102,5 +120,7 @@ body.content_layout {
     .container {
       margin: 10px;
     }
+
+    h1 { font-size: 1.5em; margin-bottom: 15px; }
   }
 }

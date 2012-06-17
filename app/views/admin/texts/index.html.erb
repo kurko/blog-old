@@ -19,7 +19,7 @@
           <%= text.published_status %>
         </td>
         <td><%= text.taxonomy %></td>
-        <td><%= link_to 'Destroy', [:admin, text], confirm: 'Are you sure?', method: :delete %></td>
+        <td><%= link_to 'Destroy', admin_text_path(text), confirm: 'Are you sure?', method: :delete %></td>
       </tr>
     <% end %>
   </body>
