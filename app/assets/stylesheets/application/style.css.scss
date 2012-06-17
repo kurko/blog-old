@@ -31,7 +31,7 @@ header {
   .header_container {
     width: 960px;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 13px 0 10px 0;
   }
 
   #about_header {
@@ -39,6 +39,7 @@ header {
     text-align: center;
     width: 800px;
     margin: 15px auto;
+    margin-top: 18px;
     display: table;
     font-size: 3em;
     font-weight: bold;
@@ -90,11 +91,6 @@ body.content_layout {
   .main_content_columns {
     width: 680px;
     float: left;
-
-    h1 {
-      font-size: 3.0em;
-      margin-bottom: 10px;
-    }
   }
 
   .secondary_column {
