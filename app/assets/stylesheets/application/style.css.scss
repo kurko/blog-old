@@ -81,6 +81,25 @@ body.content_layout {
     img:first-child { margin-left: 0; }
   }
 
+  a#twitter {
+    height: 50px;
+    display: table;
+
+    &.content {
+      width: 240px;
+      background: image-url("application/twitter.png") no-repeat;
+    }
+
+    &.home {
+      width: 225px;
+      background: image-url("application/twitter_home.png") no-repeat;
+    }
+
+    &:hover {
+      background-position: 0 -50px;
+    }
+  }
+
   .contents_columns {
     .content {
       display: table;
