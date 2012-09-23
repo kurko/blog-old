@@ -5,7 +5,8 @@ body {
 }
 
 h1, h2, h3, h4, h5 { 
-  font-family: "Myriad Pro";
+  font-family: "Myriad Pro", "Lucida Grande", "Verdana", "Arial", "Sans-serif";
+  .content & { line-height: 26px; }
 }
 
 a { color: #512c00; text-decoration: none; }
@@ -47,7 +48,7 @@ header {
   }
 
   #about_header {
-    font-family: "Myriad Pro";
+    font-family: "Myriad Pro", "Lucida Grande", "Verdana", "Arial", "Sans-serif";
     text-align: center;
     width: 800px;
     margin: 15px auto;
