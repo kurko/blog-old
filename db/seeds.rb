@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+if Rails.env.development?
+  AdminUser.where(email: "admin@example.com").first_or_create(password: "123456")
+end
+
+Taxonomy::Persistence.where(name: "Personal").first_or_create
+Taxonomy::Persistence.where(name: "Essays").first_or_create
+Taxonomy::Persistence.where(name: "Software").first_or_create

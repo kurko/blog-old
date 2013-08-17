@@ -25,7 +25,7 @@ class Admin::TextsController < Admin::ApplicationController
     if @text.save
       redirect_to admin_texts_path, notice: 'Text was successfully created.'
     else
-      render action: "new"
+      render "new"
     end
   end
 

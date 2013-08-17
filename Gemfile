@@ -1,54 +1,50 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '~>4'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# rails 4 compatibility
+  gem 'protected_attributes'
+  gem 'activerecord-deprecated_finders'
 
-gem 'sqlite3'
-gem 'mysql2'
+# Database
+  gem 'sqlite3'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# Components for forms and widgets
+  gem "devise"
+  gem "simple_form"
+
+# Presenters and objects for simplifying internal workflows
+  gem "draper"
+  gem "redcarpet"
+
+# Assets and client stuff
+  # Asset building
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'therubyracer', "0.11.4"
+  gem 'uglifier'
 
-  gem 'uglifier', '>= 1.0.3'
+  # Libs
+  gem 'jquery-rails'
+
+# Deploying
+gem 'capistrano'
+
+group :development do
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller', '0.7.2'
 end
 
-group :development, :test, :production do
+group :development, :test do
   gem "rspec-rails"
+  gem "capybara"
 end
 
 group :test do
-  gem "capybara"
   gem "capybara-webkit"
   gem "launchy"
   gem "factory_girl_rails"
-  gem "database_cleaner"
+  gem "database_cleaner", "1.0.1"
 end
-
-gem "devise"
-gem 'jquery-rails'
-gem "simple_form"
-gem "draper"
-gem "redcarpet"
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
