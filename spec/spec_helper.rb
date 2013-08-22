@@ -12,6 +12,7 @@ RSpec.configure do |config|
   config.filter_run wip: true
   config.run_all_when_everything_filtered = true
 
+  config.include FactoryGirl::Syntax::Methods
   config.include AcceptanceHelpers
   config.include Devise::TestHelpers, :type => :controller
   config.extend ControllerMacros

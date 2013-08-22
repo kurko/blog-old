@@ -3,7 +3,7 @@ FactoryGirl.define do
     title "My text title"
     description "This is a description"
     content "This is the content"
-    taxonomy
+    association :taxonomy
 
     trait :published do
       published true

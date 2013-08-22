@@ -8,6 +8,7 @@ gem 'rails', '~>4'
 
 # Database
   gem 'sqlite3'
+  gem 'mysql2'
 
 
 # Components for forms and widgets
@@ -25,8 +26,13 @@ gem 'rails', '~>4'
   gem 'therubyracer', "0.11.4"
   gem 'uglifier'
 
+  # View
+  gem "active_model_serializers"
+
   # Libs
   gem 'jquery-rails'
+  gem 'ember-rails'
+  gem 'ember-source', '1.0.0.rc7'
 
 # Deploying
 gem 'capistrano'

@@ -20,6 +20,10 @@ Blog::Application.routes.draw do
 
   resources :texts, only: [:index, :show]
 
+  namespace :api do
+    resources :texts, only: [:index]
+  end
+
   get "home/index"
 
   root :to => 'home#index'

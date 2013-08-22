@@ -12,5 +12,10 @@ module Text
 
     scope :published_texts, ->{ where("texts.published = ?", true) }
     scope :all_texts, ->{ order("id desc") }
+    scope :by_category, ->(name) {
+      includes(:taxonomy)
+      .where("taxonomies.name = ?", name)
+      .references(:taxonomies)
+    }
   end
 end
