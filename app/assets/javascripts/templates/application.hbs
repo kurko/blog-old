@@ -1,13 +1,12 @@
 <div class="body_background">
 
-  <header>
+  <header {{bindAttr class="pageClass"}}>
     <div class="header_container">
-      <nav>
+      <h1>
         The Alex's Quest
-      </nav>
+      </h1>
       <div id="about_header">
-        I am Alexandre de Oliveira, 26, software developer
-        at Stack Builders, a NY based company.
+        I am Alexandre, software developer at Stack Builders.
       </div>
     </end>
   </header>
@@ -15,6 +14,7 @@
   <div id="global">
     <div id="main">
       <div class="main_container">
+        <!--
         <div id="photos_line">
           <img src="assets/tmp/01.jpeg" width="50" height="50" />
           <img src="assets/tmp/02.jpeg" width="50" height="50" />
@@ -35,6 +35,7 @@
           <img src="assets/tmp/01.jpeg" width="50" height="50" />
           <img src="assets/tmp/02.jpeg" width="50" height="50" />
         </div>
+        -->
         <div class="contents_columns">
           {{outlet}}
         </div>

@@ -1,0 +1,183 @@
+$theme_color: #0C79A3
+
+body
+  font-size: 100%
+  color: #555
+  font-family: "Helvetica Neue", "Verdana", "Arial", "Sans-serif"
+  background: #fdfdfd
+
+  -webkit-font-smoothing: antialiased
+  -moz-font-smoothing: antialiased
+  -ms-font-smoothing: antialiased
+  font-smoothing: antialiased
+
+  -moz-text-shadow: 0 0 1px rgba(0, 0, 0, 0.01)
+  -ms-text-shadow: 0 0 1px rgba(0, 0, 0, 0.01)
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.01)
+
+  -webkit-text-stroke: 1px transparent
+  -moz-text-stroke: 1px transparent
+  -ms-text-stroke: 1px transparent
+  text-stroke: 1px transparent
+
+h1, h2, h3, h4, h5
+  font-weight: 200
+  .content &
+    line-height: 26px
+
+h2.title
+  margin-bottom: 15px
+
+a
+  color: $theme_color
+  text-decoration: none
+
+a:hover
+  text-decoration: underline
+
+p
+  margin-bottom: 20px
+  line-height: 1.8em
+
+  a
+    color: $theme_color
+
+ul
+  margin: 0 0 15px 15px
+
+  li
+    margin: 3px
+
+span.detail
+  font-size: 0.9em
+  color: #777
+
+#global
+  width: 960px
+  display: table
+  margin: 0px auto
+
+header
+  border-bottom: 1px solid #ebede7
+  margin-bottom: 15px
+
+  h1
+    font-size: 0.9em
+    margin: 0 auto
+    display: table
+    text-transform: uppercase
+
+  .header_container
+    width: 960px
+    margin: 0 auto
+    padding: 13px 0 10px 0
+
+  #about_header
+    text-align: center
+    width: 800px
+    margin: 15px auto
+    margin-top: 18px
+    display: table
+    font-weight: bold
+    font-size: 1em
+
+  &.index
+    #about_header
+      text-align: center
+      width: 800px
+      margin: 15px auto
+      margin-top: 18px
+      font-weight: 200
+      display: table
+      font-size: 3em
+
+body.content_layout
+  header #about_header
+    margin: 0
+    text-align: left
+    font-size: 1.4em
+
+#main
+  display: table
+  width: 960px
+
+  #photos_line
+    margin-bottom: 15px
+    display: table
+    text-align: center
+    width: 100%
+    font-size: 0
+
+    img
+      margin-left: 3px
+    img:first-child
+      margin-left: 0
+
+  a#twitter
+    height: 50px
+    display: table
+
+    &.content
+      width: 240px
+      background: image-url("application/twitter.png") no-repeat
+
+    &.home
+      width: 200px
+      background: image-url("application/twitter_home.png") no-repeat
+
+    &:hover
+      background-position: 0 -50px
+
+  .contents_columns
+    .full_text
+      width: 600px
+      margin: 0 auto
+
+      h1
+        font-size: 2.6em
+        color: $theme_color
+        margin-bottom: 25px
+      h2
+        font-weight: bold
+        margin-bottom: 20px
+
+      code
+        padding: 3px
+        font-family: "Monaco"
+        background: #eee
+        font-weight: bold
+
+    .content
+      display: table
+      float: left
+      width: 220px
+      margin: 0 0 0 20px
+
+      h1
+        font-size: 0.8em
+        text-transform: uppercase
+        margin-bottom: 15px
+
+      #highlights
+        h1
+          margin-bottom: 12px
+
+    .content:first-child
+      margin: 0
+
+  .main_content_columns
+    width: 680px
+    float: left
+
+  .secondary_column
+    width: 260px
+    float: right
+    background-color: #f4f4f4
+    border: 1px solid #ebede7
+
+    .container
+      margin: 10px
+
+    h1
+      font-size: 1.5em
+      margin-bottom: 15px

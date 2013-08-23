@@ -96,6 +96,7 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
+    flickraw (0.9.6)
     handlebars-source (1.0.12)
     highline (1.6.19)
     hike (1.2.3)
@@ -214,6 +215,7 @@ DEPENDENCIES
   ember-rails
   ember-source (= 1.0.0.rc7)
   factory_girl_rails
+  flickraw
   jquery-rails
   launchy
   mysql2

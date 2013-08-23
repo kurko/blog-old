@@ -17,5 +17,9 @@ module Text
       .where("taxonomies.name = ?", name)
       .references(:taxonomies)
     }
+
+    def body
+      self.content
+    end
   end
 end

@@ -10,9 +10,14 @@ class TextDecorator < ApplicationDecorator
     model.taxonomy.name if model.taxonomy.present?
   end
 
-  def content
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
-    markdown.render model.content
+  def body
+    Rails.logger.info "here"
+    markdown = Redcarpet::Markdown.new(
+      Redcarpet::Render::HTML,
+      autolink: true,
+      space_after_headers: true
+    )
+    markdown.render model.body
   end
 
   def published_status

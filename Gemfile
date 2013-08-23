@@ -34,6 +34,9 @@ gem 'rails', '~>4'
   gem 'ember-rails'
   gem 'ember-source', '1.0.0.rc7'
 
+# Third-party APIs
+  gem 'flickraw'
+
 # Deploying
 gem 'capistrano'
 

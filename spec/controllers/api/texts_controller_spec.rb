@@ -16,7 +16,7 @@ describe Api::TextsController do
 
       json = json["texts"].first
       json["title"].should == "titlee"
-      json["content"].should == "contentt"
+      json["body"].should == "<p>contentt</p>\n"
       json["description"].should == "This is a description"
     end
   end
