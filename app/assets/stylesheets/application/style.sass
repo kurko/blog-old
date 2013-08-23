@@ -61,6 +61,26 @@ header
   border-bottom: 1px solid #ebede7
   margin-bottom: 15px
 
+  &.index .history_navigation
+    display: none
+
+  .history_navigation
+    a
+      background: image-url("navigation_arrow_left_dark.png") no-repeat
+      background-position: 0 1px
+      padding: 0 0 5px 12px
+      margin-left: 5px
+      display: relative
+      top: 3px
+      &:hover
+        text-decoration: none
+        opacity: 0.7
+        -webkit-transition: 200ms linear
+        -moz-transition: 200ms linear
+        -o-transition: 200ms linear
+        -ms-transition: 200ms linear
+        transition: 200ms linear
+
   h1
     font-size: 0.9em
     margin: 0 auto
@@ -168,3 +188,8 @@ body.content_layout
     h1
       font-size: 1.5em
       margin-bottom: 15px
+
+footer
+  display: table
+  margin: 30px auto
+  font-size: 0.8em

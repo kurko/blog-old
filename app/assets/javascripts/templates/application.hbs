@@ -2,13 +2,18 @@
 
   <header {{bindAttr class="pageClass"}}>
     <div class="header_container">
-      <h1>
-        {{#linkTo "index"}}The Alex's Quest{{/linkTo}}
-      </h1>
-      <div id="about_header">
-        I am Alexandre, software developer at Stack Builders.
+      <div class="history_navigation">
+        {{#linkTo "index"}}Back{{/linkTo}}
       </div>
-    </end>
+      <div class="content">
+        <h1>
+          {{#linkTo "index"}}Alex's Quest{{/linkTo}}
+        </h1>
+        <div id="about_header">
+          I am Alexandre, software developer at Stack Builders.
+        </div>
+      </div>
+    </div>
   </header>
 
   <div id="global">
@@ -42,6 +47,7 @@
       </div>
     </div>
     <footer>
+      Developed with Ember.js
     </footer>
   </div>
 </div>
