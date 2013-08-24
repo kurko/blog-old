@@ -35,7 +35,7 @@ a
 a:hover
   text-decoration: underline
 
-p
+p, ul
   margin-bottom: 20px
   line-height: 1.8em
 
@@ -44,9 +44,6 @@ p
 
 ul
   margin: 0 0 15px 15px
-
-  li
-    margin: 3px
 
 span.detail
   font-size: 0.9em
@@ -117,6 +114,24 @@ body.content_layout
     text-align: left
     font-size: 1.4em
 
+.big_picture
+  background: #111
+  margin: 0 0 15px 0
+  border-radius: 4px
+  overflow: hidden
+  width: 960px
+  height: 350px
+
+  .description
+    color: #bbb
+    display: table
+    position: relative
+    bottom: 30px
+    float: right
+    padding: 10px
+    font-size: 0.7em
+    text-transform: uppercase
+
 #main
   display: table
   width: 960px
@@ -151,14 +166,74 @@ body.content_layout
   .contents_columns
 
     // see articles.sass for more .full_text style
-    .full_text h1
-      color: $theme_color
+    .internal
+      h1
+        font-size: 2.6em
+        margin-bottom: 15px
+        color: $theme_color
+      h2
+        font-weight: bold
+        margin-bottom: 20px
+      ul
+        margin: 0 0 15px 25px
+
+      a
+        text-decoration: underline
+
+      .gist
+        margin-bottom: 20px
+
+        .gist-file
+          border-radius: 5px
+
+          .line
+            line-height: 18px
+
+        .gist-data.gist-syntax
+          border-bottom: 0 !important
+          border-radius: 5px
+
+        .gist-meta
+          display: none
+
+      span.text_block
+        width: 200px
+        font-size: 0.8em
+        background: #F8F8FF
+        border-radius: 5px
+        padding: 10px
+        border: 1px solid #ddd
+
+        &.right
+          float: right
+          margin: 0 0 0 10px
+
+        &.left
+          float: left
+          margin: 0 10px 0 0
+
+      .indent
+        margin: 0 0 0 25px
+        display: table
+
+      hr
+        display: block
+        border: 0
+        border-bottom: 1px solid #bbb
+        margin: 25px 0 25px 0
+
 
     .content
       display: table
       float: left
-      width: 220px
-      margin: 0 0 0 20px
+      width: 300px
+      margin: 0 20px 0 0
+
+      &.content-2
+        width: 620px
+
+      &:last-child
+        margin: 0
 
       h1
         font-size: 0.8em
