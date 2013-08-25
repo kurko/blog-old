@@ -6,6 +6,12 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render "layouts/shared/google_analytics" %>
+  <script type="text/javascript">
+    var images = {
+      'tokyo-woman': '<%= asset_path("personal/tokyo-woman.jpg") %>',
+      'amsterdam-smalltalk': '<%= asset_path("personal/amsterdam-smalltalk.jpg") %>'
+    };
+  </script>
 </head>
 <body>
 
