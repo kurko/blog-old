@@ -82,6 +82,10 @@ header
         -ms-transition: 200ms linear
         transition: 200ms linear
 
+  .picture
+    display: none
+    width: 200px
+    float: left
   h1
     font-size: 0.9em
     margin: 0 auto
@@ -92,10 +96,10 @@ header
     width: 960px
     margin: 0 auto
     padding: 13px 0 10px 0
+    display: table
 
   #about_header
     text-align: center
-    width: 800px
     margin: 15px auto
     margin-top: 18px
     display: table
@@ -103,9 +107,24 @@ header
     font-size: 1em
 
   &.index
+    .picture
+      border-radius: 1000px
+      overflow: hidden
+      display: table
+      margin: 20px 0 0 10px
+      width: 170px
+      height: 170px
+      float: left
+      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.3)
+      background: image-url("personal/me.jpg") no-repeat -10px -10px
+
+    .content
+      width: 680px
+      float: left
+      display: table
+
     #about_header
       text-align: center
-      width: 800px
       margin: 15px auto
       margin-top: 18px
       font-weight: 200

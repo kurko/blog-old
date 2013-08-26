@@ -7,7 +7,7 @@ set :repository, "git://github.com/kurko/blog.git"
 set :deploy_to, proc { "/var/projects/#{application}" }
 
 set :user, `whoami`.gsub(/\n/, "")
-set :use_sudo, true
+set :use_sudo, false
 set :scm, :git
 set :deploy_via, :remote_cache
 set :scm_verbose, true
