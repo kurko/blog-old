@@ -10,3 +10,15 @@
 App = Ember.Application.create();
 
 //= require_tree .
+
+// Auto load pictures to make website snappier
+$(document).ready(function() {
+  setTimeout(function() {
+    var img;
+
+    for (i in window.images) {
+      img = new Image;
+      img.src = window.images[i];
+    }
+  }, 600);
+});
