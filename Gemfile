@@ -32,7 +32,7 @@ gem 'rails', '~>4'
   # Libs
   gem 'jquery-rails'
   gem 'ember-rails'
-  gem 'ember-source', '1.0.0.rc7'
+  gem 'ember-source', '1.0.0.rc8'
 
 # Third-party APIs
   gem 'flickraw'

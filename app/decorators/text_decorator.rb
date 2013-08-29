@@ -11,7 +11,6 @@ class TextDecorator < ApplicationDecorator
   end
 
   def body
-    Rails.logger.info "here"
     markdown = Redcarpet::Markdown.new(
       Redcarpet::Render::HTML,
       autolink: true,

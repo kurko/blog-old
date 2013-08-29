@@ -86,7 +86,7 @@ GEM
       execjs (>= 1.2)
       handlebars-source
       railties (>= 3.1)
-    ember-source (1.0.0.rc7)
+    ember-source (1.0.0.rc8)
       handlebars-source (= 1.0.12)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -213,7 +213,7 @@ DEPENDENCIES
   devise
   draper
   ember-rails
-  ember-source (= 1.0.0.rc7)
+  ember-source (= 1.0.0.rc8)
   factory_girl_rails
   flickraw
   jquery-rails
