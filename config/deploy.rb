@@ -5,8 +5,14 @@ default_run_options[:pty] = true
 set :application, "alexsquest_blog"
 set :repository, "git://github.com/kurko/blog.git"
 set :deploy_to, proc { "/var/projects/#{application}" }
+set :ssh_options, {:forward_agent => true}
 
-set :user, `whoami`.gsub(/\n/, "")
+if `echo $BLOG_USER`.empty?
+  puts "We don't know what user to deploy. Define $BLOG_USER."
+  exit
+end
+
+set :user, `echo $BLOG_USER`.gsub(/\n/, "")
 set :use_sudo, false
 set :scm, :git
 set :deploy_via, :remote_cache
