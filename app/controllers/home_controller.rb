@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @softwares = load_software_texts
-    @essays    = load_essay_texts
-    @personals = load_personal_texts
+    @software = load_software_texts
+    @essay    = load_essay_texts
+    @personal = load_personal_texts
   end
 
   private

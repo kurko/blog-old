@@ -62,9 +62,6 @@ span.detail
 header
   border-bottom: 1px solid #eee
 
-  &.index .history_navigation
-    display: none
-
   .history_navigation
     a
       background: image-url("navigation_arrow_left_dark.png") no-repeat
@@ -106,7 +103,11 @@ header
     font-weight: bold
     font-size: 1em
 
-  &.index
+body.home.index
+  header
+    .history_navigation
+      display: none
+
     .picture
       border-radius: 1000px
       overflow: hidden
@@ -115,7 +116,7 @@ header
       width: 170px
       height: 170px
       float: left
-      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.3)
+      box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.3)
       background: image-url("personal/me.jpg") no-repeat -10px -10px
 
     .content
@@ -130,6 +131,7 @@ header
       font-weight: 200
       display: table
       font-size: 3em
+      padding: 0 10px
 
 body.content_layout
   header #about_header
@@ -227,12 +229,16 @@ body.content_layout
         margin-bottom: 15px
         color: $theme_color
       h2
+        font-size: 1.7em
         font-weight: bold
         margin-bottom: 20px
         a
           font-size: 0.6em !important
           font-weight: normal
           text-decoration: none
+      h3
+        font-weight: bold
+        margin-bottom: 10px
 
       ul
         margin: 0 0 15px 25px

@@ -1,10 +1,11 @@
 Blog::Application.routes.draw do
 
   get "taxonomy/index"
-
   get "taxonomy/show"
-
   get "dashboard/index"
+
+  get "about" => "static_pages#about"
+  get "oss"   => "static_pages#oss"
 
   devise_for :admin_users, path: "admin",
     controllers: {

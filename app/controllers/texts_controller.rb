@@ -1,9 +1,9 @@
-class TextsController < ApplicationContentsController
+class TextsController < ApplicationController
   def index
   end
 
   def show
-    @text = DecorationBuilder.text(Text::Persistence.find(text_id))
+    @controller = DecorationBuilder.text(Text::Persistence.find(text_id))
   end
 
 private

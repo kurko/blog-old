@@ -1,5 +1,5 @@
 <div class="big_picture">
-  <img {{bindAttr src='image_path'}} alt="Tokyo Woman" width="960" height="350" />
+  <%= image_tag "personal/tokyo-woman.jpg", size: "960x350", alt: "Tokyo Woman" %>
   <span class="description">
     <a href="http://www.flickr.com/photos/eualexandre/sets/72157634966831608/"
       target="flickr">Taken in Tokyo, 2012</a>
@@ -59,7 +59,7 @@
   </p>
   <p>
     These are some of the things I share here.
-    {{#linkTo "oss"}}Check some of my OSS projects{{/linkTo}}.
+    <%= link_to "Check some of my OSS projects", oss_path %>.
   </p>
 </div>
 
@@ -86,7 +86,11 @@
       <span class="detail">(São Paulo)</span>
     </li>
     <li>
-      Euruko 2013 <strong>as speaker</strong>
+      RubyConf Uruguay 2013
+      <span class="detail">(Montevideo)</span>
+    </li>
+    <li>
+      Euruko 2013 <strong>(speaker)</strong>
       <span class="detail">(Athens)</span>
     </li>
     <li>
@@ -95,7 +99,11 @@
     </li>
     <li>
       RubyConf Brazil 2013
-      <span class="detail">(São Paulo)</span>
+      <span class="detail"></span>
+    </li>
+    <li>
+      RubyConf Argentina 2013 <strong>(speaker)</strong>
+      <span class="detail"></span>
     </li>
   </ul>
 </div>
