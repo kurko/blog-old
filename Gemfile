@@ -18,6 +18,7 @@ gem 'rails', '~>4'
 # Presenters and objects for simplifying internal workflows
   gem "draper"
   gem "redcarpet"
+  gem 'friendly_id', '~> 5.0.0'
 
 # Assets and client stuff
   # Asset building
@@ -31,8 +32,6 @@ gem 'rails', '~>4'
 
   # Libs
   gem 'jquery-rails'
-  gem 'ember-rails'
-  gem 'ember-source', '1.0.0.rc8'
 
 # Third-party APIs
   gem 'flickraw'

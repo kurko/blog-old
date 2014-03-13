@@ -6,7 +6,7 @@ class Admin::TextsController < Admin::ApplicationController
   end
 
   def show
-    @text = Text::Persistence.find(params[:id])
+    @text = Text::Persistence.friendly.find(params[:id])
   end
 
   def new
@@ -14,7 +14,7 @@ class Admin::TextsController < Admin::ApplicationController
   end
 
   def edit
-    @text = Text::Persistence.find(params[:id])
+    @text = Text::Persistence.friendly.find(params[:id])
     @selected_taxonomy = @text.taxonomy_id
   end
 
@@ -30,7 +30,7 @@ class Admin::TextsController < Admin::ApplicationController
   end
 
   def update
-    @text = Text::Persistence.find(params[:id])
+    @text = Text::Persistence.friendly.find(params[:id])
     define_publishing_state
 
     if @text.update_attributes(params[:text])
@@ -41,7 +41,7 @@ class Admin::TextsController < Admin::ApplicationController
   end
 
   def destroy
-    @text = Text::Persistence.find(params[:id])
+    @text = Text::Persistence.friendly.find(params[:id])
     @text.destroy
 
     respond_to do |format|
@@ -50,8 +50,8 @@ class Admin::TextsController < Admin::ApplicationController
     end
   end
 
-private
-  
+  private
+
   def load_taxonomies
     @taxonomies = Taxonomy::Persistence.all
   end

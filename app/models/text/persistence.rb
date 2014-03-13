@@ -2,6 +2,9 @@ module Text
   class Persistence < ActiveRecord::Base
     self.table_name = "texts"
 
+    extend FriendlyId
+    friendly_id :title, use: :slugged
+
     attr_accessible :author_id, :content, :description, :title
     attr_accessible :published
     attr_accessible :taxonomy_id
