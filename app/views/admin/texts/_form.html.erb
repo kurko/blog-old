@@ -3,7 +3,7 @@
   <%= f.input :taxonomy_id, value_method: :id, collection: @taxonomies %><br />
 
   <%= f.input :title, as: :string %><br />
-  <%= f.input :description, input_html: { rows: 4 } %><br />
+  <%= f.input :description, input_html: { class: :text_description } %><br />
   <%= f.input :content %><br />
   <%= f.submit "Save as draft" %>
   <%= f.submit "Publish" %>
