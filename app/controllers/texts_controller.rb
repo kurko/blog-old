@@ -3,10 +3,10 @@ class TextsController < ApplicationController
   end
 
   def show
-    @controller = DecorationBuilder.text(Text::Persistence.friendly.find(text_id))
+    @controller = ::DecorationBuilder.text(Text::Persistence.friendly.find(text_id))
   end
 
-private
+  private
 
   def text_id
     params[:id]

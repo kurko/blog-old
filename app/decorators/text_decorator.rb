@@ -1,3 +1,5 @@
+require 'blog/red_carpet_extended'
+
 class TextDecorator < ApplicationDecorator
   decorates :text
   delegate_all
@@ -12,7 +14,7 @@ class TextDecorator < ApplicationDecorator
 
   def body
     markdown = Redcarpet::Markdown.new(
-      Redcarpet::Render::HTML,
+      ::Blog::RedCarpetExtended,
       autolink: true,
       space_after_headers: true
     )
