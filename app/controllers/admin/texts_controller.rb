@@ -23,7 +23,7 @@ class Admin::TextsController < Admin::ApplicationController
     define_publishing_state
 
     if @text.save
-      redirect_to admin_texts_path, notice: 'Text was successfully created.'
+      redirect_to @redirect_to, notice: 'Text was successfully created.'
     else
       render "new"
     end
@@ -34,7 +34,7 @@ class Admin::TextsController < Admin::ApplicationController
     define_publishing_state
 
     if @text.update_attributes(params[:text])
-      redirect_to admin_texts_path, notice: 'Text was successfully updated.'
+      redirect_to @redirect_to, notice: 'Text was successfully updated.'
     else
       render action: "edit"
     end
@@ -59,7 +59,9 @@ class Admin::TextsController < Admin::ApplicationController
   def define_publishing_state
     if params[:commit] == "Publish"
       @text.published = true
+      @redirect_to = admin_texts_path
     else
+      @redirect_to = edit_admin_text_path(@text)
       @text.published = false
     end
   end
