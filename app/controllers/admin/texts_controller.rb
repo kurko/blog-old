@@ -23,7 +23,7 @@ class Admin::TextsController < Admin::ApplicationController
     define_publishing_state
 
     if @text.save
-      redirect_to @redirect_to, notice: 'Text was successfully created.'
+      redirect_to admin_texts_path, notice: 'Text was successfully created.'
     else
       render "new"
     end
