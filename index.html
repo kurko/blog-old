@@ -2,56 +2,61 @@
 layout: default
 ---
 
-<div class="home">
+<!-- Categoria: software -->
+<div class="home home-1-2">
 
   <h1 class="page-heading">SOFTWARE</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
+    {% for post in site.categories.software %}
+      <li>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
+      <p class="post-metaq">{{ post.desc }}</p>
     {% endfor %}
   </ul>
 
 </div>
 
-<div class="home">
+<!-- Categoria: essay -->
+<div class="home home-1-2">
 
   <h1 class="page-heading">ESSAYS</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
+    {% for post in site.categories.essay %}
+      <li>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
-    {% endfor %}
+      <p class="post-metaq">{{ post.desc }}</p>
+    {% endfor%}
+
   </ul>
 
 </div>
 
+<!-- Categoria: personal -->
 <div class="home">
 
   <h1 class="page-heading">PERSONAL & OFF-TOPIC</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
+    {% for post in site.categories.personal %}
+      <li>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
+        <p class="post-metaq">{{ post.desc }}</p>
     {% endfor %}
+
   </ul>
 
 </div>

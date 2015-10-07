@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Announcing Ember Sync"
-desc: "Ember Sync allows Ember.js apps to seamlessly work online and offline"
+title:  "Problem Solving Methodology"
+desc: "Describes a methodology for solving problems"
 date:   2015-10-02 19:12:12
-categories: software
+categories: personal
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Announcing Ember Sync"
-desc: "Ember Sync allows Ember.js apps to seamlessly work online and offline"
+title:  "Design: expressing ideas at the right volume"
+desc: "Do you use a finance app? Do you hate selecting categories? In this articles, I will walk you through the design process of creating a better experience. We'll see how to amplify ideas and leave other where they should be."
 date:   2015-10-02 19:12:12
-categories: software
+categories: essay
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
