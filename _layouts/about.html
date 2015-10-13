@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    <header class="site-header">
+
+      <div class="wrapper">
+        <div class="history_navigation">
+          <a href="javascript: history.back()">&lt;Back</a>
+        </div>
+
+        <div class="content">
+          <div class="site-title">
+            <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+          </div>
+
+          <div id="about_title">
+            I am Alexandre, senior developer at vRide Inc.
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="index_submenu">
+
+      </div>
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
